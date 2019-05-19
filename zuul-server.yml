@@ -1,0 +1,21 @@
+server:
+    port: '${PORT:9092}'
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: '${EUREKA_URL:http://localhost:9091}/eureka/'
+        registerWithEureka: false
+ribbon:
+    eureka:
+        enabled: true
+zuul:
+    prefix: /api
+    routes:
+        articles:
+            path: '/suggestions/tracks/**'
+            serviceId: suggestion-server
+endpoints:
+    routes:
+        sensitive: false
+    trace:
+        sensitive: false
