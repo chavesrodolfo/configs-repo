@@ -12,5 +12,6 @@ ribbon:
         enabled: true
 kafka:
     bootstrap-servers: 127.0.0.1:9092
-    topic:
-        helloworld: communicator.t,rubeus.t,helloworld.t
+    topics: communicator.t\
+        rubeus.t\
+        helloworld.t
