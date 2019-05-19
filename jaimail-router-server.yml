@@ -1,0 +1,12 @@
+server:
+    port: '${PORT:9094}'
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: '${EUREKA_URL:http://localhost:9091}/eureka/'
+    instance:
+        leaseRenewalIntervalInSeconds: 1
+        leaseExpirationDurationInSeconds: 2
+ribbon:
+    eureka:
+        enabled: true
