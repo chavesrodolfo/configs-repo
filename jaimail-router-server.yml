@@ -10,3 +10,7 @@ eureka:
 ribbon:
     eureka:
         enabled: true
+kafka:
+    bootstrap-servers: http://localhost:9092
+    topic:
+        helloworld: helloworld.t
